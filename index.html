@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HHH的贪吃蛇游戏练习（不能掉头）</title>
@@ -42,28 +44,26 @@
         .controller #up {
             grid-column: 2;
             grid-row: 1;
-            width: 10vh;
-            height: 10vh;
             position: relative;
-            top: 170px;
+            top: 100px;
         }
         .controller #down {
             grid-column: 2;
             grid-row: 3;
             position: relative;
-            top: 170px;
+            top: 100px;
         }
         .controller #left {
             grid-column: 1;
             grid-row: 2;
             position: relative;
-            top: 170px;
+            top: 100px;
         }
         .controller #right {
             grid-column: 3;
             grid-row: 2;
             position: relative;
-            top: 170px;
+            top: 100px;
         }
         .controller button:active {
             background-color: #fffc4b;
@@ -71,8 +71,7 @@
     </style>
 </head>
 <body>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-
+    
     <canvas id="gameCanvas" width="400" height="400"></canvas>
     <div class="controller">
         <button id="up">上</button>
@@ -156,7 +155,7 @@
             // 绘制蛇和食物
             draw();
             // 每隔100毫秒执行一次游戏循环
-            setTimeout(gameLoop, 80);
+            setTimeout(gameLoop, 90);
         }
 
         // 监听按钮点击事件，改变蛇的移动方向
